@@ -1,6 +1,6 @@
 {
   "name": "@netang/node-utils",
-  "version": "0.2.18",
+  "version": "0.2.19",
   "description": "netang-node-utils",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -22,7 +22,6 @@
   },
   "homepage": "https://github.com/netangsoft/netang-node-utils#readme",
   "dependencies": {
-    "@netang/utils": "^0.2.40",
     "gulp": "^4.0.2",
     "gulp-ignore": "^3.0.0",
     "gulp-replace": "^1.1.3",

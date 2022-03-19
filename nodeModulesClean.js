@@ -2,7 +2,6 @@ const fs = require('fs')
 const minimatch = require('minimatch')
 const _concat = require('lodash/concat')
 const _has = require('lodash/has')
-const isFillObject = require('@netang/utils/isFillObject')
 const traverseFiles = require('./traverseFiles')
 const delFile = require('./delFile')
 
@@ -133,16 +132,19 @@ function nodeModulesClean(nodeModulesPath, delFiles = [], delDirs = []) {
                 const packageJson = require(filePath)
 
                 const newJson = {}
+                let num = 0
 
                 if (_has(packageJson, 'version')) {
+                    num++
                     newJson.version = packageJson.version
                 }
 
                 if (_has(packageJson, 'main')) {
+                    num++
                     newJson.main = packageJson.main
                 }
 
-                if (isFillObject(newJson)) {
+                if (num) {
                     fs.writeFileSync(filePath, JSON.stringify(newJson))
                 } else {
                     fs.unlinkSync(filePath)
