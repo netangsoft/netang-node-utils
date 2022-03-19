@@ -1,6 +1,6 @@
 {
   "name": "@netang/node-utils",
-  "version": "0.2.19",
+  "version": "0.2.20",
   "description": "netang-node-utils",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -32,7 +32,6 @@
     "pump": "^3.0.0",
     "util": "^0.12.4",
     "webpack": "^4.46.0",
-    "webpack-chain": "^6.5.1",
     "webpack-cli": "^4.9.2"
   }
 }
