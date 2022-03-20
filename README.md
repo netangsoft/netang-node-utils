@@ -1,27 +1,26 @@
 ## Installation
 
 ```bash
-npm install @netang/node-utils --dev
+npm install @netang/node-utils --save-dev
 ```
 
 Install mandatory peer dependencies
 ```bash
-npm install lodash --dev
+npm install lodash --save-dev
 ```
 
 Optional Dependencies
 ```bash
-npm install gulp --dev
-npm install gulp-ignore --dev
-npm install gulp-replace --dev
-npm install gulp-terser --dev
-npm install gulp-watch --dev
-npm install minimatch --dev
-npm install pump --dev
-npm install util --dev
-npm install gulp --dev
-npm install webpack@^4.46.0 --dev
-npm install webpack-cli@^4.9.2 --dev
+npm install gulp --save-dev
+npm install gulp-ignore --save-dev
+npm install gulp-replace --save-dev
+npm install gulp-terser --save-dev
+npm install gulp-watch --save-dev
+npm install minimatch --save-dev
+npm install pump --save-dev
+npm install util --save-dev
+npm install webpack@^4.46.0 --save-dev
+npm install webpack-cli@^4.9.2 --save-dev
 ```
 
 ## License
