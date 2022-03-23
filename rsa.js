@@ -2,7 +2,7 @@ const crypto = require('crypto')
 const _assign = require('lodash/assign')
 
 // 设置
-const opensslSettings = {
+const rsaSettings = {
     publicKey: '',
 }
 
@@ -13,7 +13,7 @@ function publicEncrypt(value) {
     try {
         return crypto.publicEncrypt({
             // 密钥
-            key: opensslSettings.publicKey,
+            key: rsaSettings.publicKey,
             // 和 php 保持一致
             padding: crypto.constants.RSA_PKCS1_PADDING,
         }, Buffer.from(JSON.stringify(value))).toString('base64')
@@ -29,7 +29,7 @@ function publicDecrypt(value) {
     try {
         return JSON.parse(crypto.publicDecrypt({
             // 密钥
-            key: opensslSettings.publicKey,
+            key: rsaSettings.publicKey,
             // 和 php 保持一致
             padding: crypto.constants.RSA_PKCS1_PADDING,
         }, Buffer.from(value.toString('base64'), 'base64')))
@@ -80,7 +80,7 @@ function publicDecrypt(value) {
  * 设置
  */
 function settings(params) {
-    _assign(opensslSettings, params)
+    _assign(rsaSettings, params)
 }
 
 module.exports = {
